@@ -93,7 +93,12 @@ header
    align-items: center;
    overflow: hidden;
    transform: scale(0);
-   transition: height .2s ease;
+   transition: transform .7s ease, height .2s ease;
+}
+
+.boxAL.active-btnLogin
+{
+    transform: scale(1);
 }
 
 .boxAL .closeIcon
@@ -114,6 +119,12 @@ header
     z-index:1;
 }
 
+.boxAL.active
+{
+    height: 520px;
+
+}
+
 .boxAL .loginBox
 {
     width: 100%;
@@ -122,14 +133,30 @@ header
 
 .boxAL .loginBox.login
 {
-    display: none;
+    
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.boxAL.active .loginBox.login
+{
+    transition: none;
+    transform: translateX(-400px);
 }
 
 .boxAL .loginBox.register
 {
     position: absolute;
+    transition: none;
     transform: translateX(400px);
 }
+
+.boxAL.active .loginBox.register
+{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
 
 .loginBox h2
 {
