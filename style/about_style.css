@@ -9,7 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url('../img/bka.jpg') no-repeat;
+  background: url('../img/bkp.jpg') no-repeat;
   background-size: cover;
   background-position: center;
 
@@ -29,7 +29,7 @@ body {
 .main.active-btnLogin {
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: center;
@@ -276,76 +276,58 @@ header {
 }
 
 
-/*Contact Page*/
+/*About Page*/
 
-.contact {
+.about
+{
+  width: 90%;
+  margin-top: 10%;
   position: absolute;
-  margin-top: 5%;
-  width: 100%;
-  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
   transform: scale(1);
-  transition: .5s ease;
+  transition: .5s ease; 
+  z-index: 0;
 }
 
-.contact.active-btnLogin
+.about.active-btnLogin
 {
   transform: scale(0);
   transition: .5s ease;
 }
-.contact h1 {
-  text-align: center;
-  color: #b3b3b3;
-}
-.contact-form {
-  max-width: 600px;
-  margin: auto;
-  padding: 10px;
-  overflow: hidden;
+
+.textAbout
+{
+  color: #ffffff; 
+  font-size: 1.38em;
 }
 
-.textContact {
+.photoSlide{
+  width: 90%;
+  padding-top: 2%;
+  margin: 10px auto;	 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.box{
+  width: 260px;
+  margin: 0 10px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, .1);
+  transition: 1s;
+
+}
+.box img{
   display: block;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 16px 0;
-  border: 0;
-  background: #111;
-  padding: 20px 40px;
-  outline: none;
-  color: #ddd;
-  transition: 0.5s;
+  width:250px;
+  height: 190px;
+  border-radius: 5px;
 }
-
-.textContact:focus {
-  box-shadow: 0 0 10px 4px #34495e;
-}
-
-textarea.textContact {
-  resize: none;
-  height: 120px;
-}
-
-.btnContact {
-  float: right;
-  color: #fff;
-  background: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 20px;
-  backdrop-filter: blur(25px);
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.731);
-  cursor: pointer;
-  padding: 10px 30px;
-  font-size: 1.4em;
-}
-
-.sendMessage
-{
-  color: white;
-  text-align: center;
-  transform: scale(0);
-}
-
-.sendMessage.active-btnContact
-{
-transform: scale(1);
+.box:hover{
+  transform: scale(1.4);
+  z-index: 2;
 }
