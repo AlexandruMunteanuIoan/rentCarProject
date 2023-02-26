@@ -8,6 +8,8 @@ const closeIcon = document.querySelector('.closeIcon');
 const btnContact = document.querySelector('.btnContact');
 const about = document.querySelector('.about');
 const sendMessage = document.querySelector('.sendMessage');
+const rentPage = document.querySelector('.rentPage');
+
 
 registerLink.addEventListener('click', () => {
     boxAL.classList.add('active');
@@ -24,12 +26,15 @@ btnLogin.addEventListener('click', () => {
 btnLogin.addEventListener('click', () => {
     boxAL.classList.add('active-btnLogin');
 });
+
 btnLogin.addEventListener('click', () => {
     main.classList.add('active-btnLogin');
 });
+
 btnLogin.addEventListener('click', () => {
     contact.classList.add('active-btnLogin');
 });
+
 btnLogin.addEventListener('click', () => {
     about.classList.add('active-btnLogin');
 });
@@ -37,17 +42,26 @@ btnLogin.addEventListener('click', () => {
 closeIcon.addEventListener('click', () => {
     boxAL.classList.remove('active-btnLogin');
 });
+
 closeIcon.addEventListener('click', () => {
     main.classList.remove('active-btnLogin');
 });
+
 closeIcon.addEventListener('click', () => {
     contact.classList.remove('active-btnLogin');
 });
+
 closeIcon.addEventListener('click', () => {
     about.classList.remove('active-btnLogin');
 });
 
-function help()
-{
+btnLogin.addEventListener('click', () => {
+    rentPage.classList.add('active-btnLogin');
+});
+
+closeIcon.addEventListener('click', () => {
+    rentPage.classList.remove('active-btnLogin');
+});
+function help() {
     sendMessage.classList.add('active-btnContact');
 }
