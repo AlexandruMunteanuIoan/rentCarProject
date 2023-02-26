@@ -1,3 +1,4 @@
+const main = document.querySelector('.main');
 const boxAL = document.querySelector('.boxAL');
 const loginLink = document.querySelector('.loginLink');
 const registerLink = document.querySelector('.registerLink');
@@ -22,9 +23,11 @@ btnLogin.addEventListener('click', ()=>
 btnLogin.addEventListener('click', ()=>
 {
     boxAL.classList.add('active-btnLogin');
+    main.classList.add('active-btnLogin');
 });
 
 closeIcon.addEventListener('click', ()=>
 {
     boxAL.classList.remove('active-btnLogin');
+    main.classList.remove('active-btnLogin');
 });
