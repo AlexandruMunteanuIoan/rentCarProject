@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../img/bka.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 0;
+}
+
+.main.active-btnLogin {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+
+}
+
+.logo {
+  font-size: 2em;
+  color: white;
+  user-select: none;
+}
+
+.navigation a {
+  position: relative;
+  font-size: 1.1em;
+  color: white;
+  text-decoration: none;
+  margin-left: 40px;
+  font-weight: bold;
+}
+
+.navigation .btnLogin {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navigation .btnLogin:hover {
+  background: white;
+  color: rgb(0, 0, 0);
+}
+
+.navigation a:hover {
+  color: rgb(255, 0, 0);
+  transition: .7s;
+
+
+}
+
+/*Login box*/
+
+.boxAL {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform .7s ease, height .2s ease;
+  z-index: 2;
+}
+
+.boxAL.active-btnLogin {
+  transform: scale(1);
+ 
+}
+
+.boxAL .closeIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #ffffff;
+  font-size: 2em;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 25px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.boxAL.active {
+  height: 520px;
+
+}
+
+.boxAL .loginBox {
+  width: 100%;
+  padding: 30px;
+}
+
+.boxAL .loginBox.login {
+
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+.boxAL.active .loginBox.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.boxAL .loginBox.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.boxAL.active .loginBox.register {
+  transition: transform .18s ease;
+  transform: translateX(0);
+}
+
+
+.loginBox h2 {
+  font-size: 2em;
+  color: #bdbdbd;
+  text-align: center;
+}
+
+.inputBox {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #bdbdbd;
+  margin: 30px 0;
+}
+
+.inputBox label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #bdbdbd;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.inputBox input:focus~label,
+.inputBox input:valid~label {
+  top: -5px;
+}
+
+
+.inputBox input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.inputBox .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #bdbdbd;
+  line-height: 57px;
+}
+
+.rememberForgotPass {
+  font-size: .9em;
+  color: white;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rememberForgotPass label input {
+  margin-right: 5px;
+  accent-color: #000;
+}
+
+.rememberForgotPass a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+.rememberForgotPass a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: rgb(255, 255, 255);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #000000;
+  font-weight: 500;
+
+}
+
+.loginRegister {
+  font-size: .9em;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10ppx
+}
+
+.loginRegister p a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.loginRegister p a:hover {
+  text-decoration: underline;
+}
+
+
+/*Contact Page*/
+
+.contact {
+  position: absolute;
+  margin-top: 5%;
+  width: 100%;
+  z-index: 0;
+  transform: scale(1);
+  transition: .5s ease;
+}
+
+.contact.active-btnLogin
+{
+  transform: scale(0);
+  transition: .5s ease;
+}
+.contact h1 {
+  text-align: center;
+  color: #b3b3b3;
+}
+
+.sendMessage {
+  color: white;
+  text-align: end;
+  visibility: hidden;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.textContact {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+
+.textContact:focus {
+  box-shadow: 0 0 10px 4px #34495e;
+}
+
+textarea.textContact {
+  resize: none;
+  height: 120px;
+}
+
+.btnContact {
+  float: right;
+  color: #fff;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.731);
+  cursor: pointer;
+  padding: 10px 30px;
+  font-size: 1.4em;
+}
